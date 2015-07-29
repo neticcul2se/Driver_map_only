@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#3EA99F">
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:text="พนักงานขับรถ"
+        android:id="@+id/tab1"
+        android:textColor="#FEFCFF"
+        android:gravity="right|center_vertical"
+        android:layout_alignParentTop="true"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/logout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/logout13"
+        android:layout_marginTop="3dp" />
+
+    <fragment
+        android:layout_below="@id/tab1"
+        android:id="@+id/googleMap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/conten"
+
+        class="com.google.android.gms.maps.SupportMapFragment"
+        />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/conten"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="#3EA99F">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:weightSum="1"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="จำนวนผู้โดยสาร"
+                android:id="@+id/textView3"
+                android:layout_weight="0.19"
+                android:gravity="center_horizontal"
+                android:textColor="#FEFCFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pp"
+                android:layout_weight="0.60"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:textColor="#FEFCFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="คน"
+                android:id="@+id/textView5"
+                android:layout_weight="0.20"
+                android:textColor="#FEFCFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:text="ปลายทาง"
+                android:id="@+id/textView2"
+                android:layout_marginLeft="10dp"
+                android:textColor="#FEFCFF" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/des" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/googleMap"
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/linearLayout"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/plus"
+                android:layout_weight="0.5"
+                android:textSize="20dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/minus"
+                android:layout_weight="0.5"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:text="เริ่มรอบใหม่"
+        android:id="@+id/round"
+        android:textColor="#FEFCFF"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/logout"
+        android:layout_toStartOf="@+id/logout" />
+
+</RelativeLayout>
